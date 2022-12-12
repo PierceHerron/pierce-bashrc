@@ -39,7 +39,7 @@ setopt HIST_FIND_NO_DUPS
 source $ZSH/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # plugins
-source $ZSH/plugins/fast-syntax-highlighting/F-Sy-H.plugin.zsh
+source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
