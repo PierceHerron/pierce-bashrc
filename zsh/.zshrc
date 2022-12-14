@@ -136,7 +136,7 @@ mg () {
 
 # break the rm habit and use the trash cli instead
 # you can still use rm with \rm
-alias rm='echo "\e[0;31mAvoid using rm, use tr or trash instead"'
+alias rm='echo "\e[0;31mAvoid using rm, use tr or trash instead!\e[1;30m"'
 alias tr='trash'
 alias trl='trash-list'
 alias empty='trash-empty' # longer and different alias for safety
