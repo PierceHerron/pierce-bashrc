@@ -50,7 +50,6 @@ fpath=($ZSH/plugins/zsh-completions/src $fpath)
 ### zsh-specific aliases
 alias zr='vim ~/.zshrc' # edit .zshrc
 alias sc='source ~/.zshrc' # source .zshrc
-alias ssc='vim ~/.zsh/spaceship.zsh' # edit spaceship config
 
 ### ls gets its own section
 alias ls='ls -A --color=auto' # not using -a or -A is like not showing hidden files on Windows
