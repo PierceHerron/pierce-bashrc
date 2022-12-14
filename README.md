@@ -1,2 +1,5 @@
 # pierce-bashrc
-Bashrc and similar stuff
+- run `./zshSetup.sh`
+- run `./zshSetupContinued.sh`
+- run `source ~/.zshrc`
+- and you're done!
