@@ -184,7 +184,7 @@ alias gaa='git add -A'
 alias all='git add -A'
 alias gs='git switch'
 alias new='git switch -c'
-alias gsm='git switch main'
+alias gsm='git switch master'
 alias pull='git pull'
 alias push='git push'
 alias gb='git branch'
@@ -194,38 +194,38 @@ alias gd='git diff'
 alias dif='git diff'
 alias diff='git diff'
 alias gm='git merge'
-alias gmm='git merge main' # not very useful because of the latest commands below
+alias gmm='git merge master' # not very useful because of the latest commands below
 alias gl='git log'
 alias gr='git restore'
 alias grs='git restore --staged'
 alias grm='git rm' # be careful
 
-# pull the latest changes from main into your branch,
+# pull the latest changes from master into your branch,
 # while leaving a commit of the premerge state
-# note that this can be simplified by just doing `git pull origin main`,
-# but this makes sure your local main is up-to-date
+# note that this can be simplified by just doing `git pull origin master`,
+# but this makes sure your local master is up-to-date
 latest () {
   targetBranch=$(git branch --show-current)
   git add -A
   git commit -m "commit prior to merging from master"
-  git switch main
+  git switch master
   git pull
   git switch $targetBranch
-  git merge main
+  git merge master
 }
 
 # this does the same as the previous function without making the premerge commit
 latestnocom () {
   targetBranch=$(git branch --show-current)
   git stash
-  git switch main
+  git switch master
   git pull
   git switch $targetBranch
-  git merge main
+  git merge master
   git stash pop
 }
 
-# backs out a commit to main and puts those changes on a new branch instead
+# backs out a commit to master and puts those changes on a new branch instead
 fixmaincommit () {
   git branch $1
   git reset HEAD~ --hard
@@ -240,8 +240,8 @@ fthis () {
     [Y][Ee][Ss]|[Y] )
       echo "Resetting master and removing untracked changes..."
       git fetch origin
-      git switch main
-      git reset --hard origin/main
+      git switch master
+      git reset --hard origin/master
       git clean -d --force
       echo "Done, your repo is like new!"
       ;;
